@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kiran | Portfolio</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            :root {
+                --bg: #0e1b26;
+                --panel: rgba(24, 43, 57, 0.92);
+                --text: #f0f8ff;
+                --accent: #38bdf8;
+                --accent2: #7dd3fc;
+                --border: rgba(56, 189, 248, 0.25);
+                --shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: #0B0909;
+                color: var(--text);
+                min-height: 100vh;
+                line-height: 1.6;
+            }
+
+            .page-wrap {
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: 20px 24px 48px;
+            }
+
+            header {
+                text-align: center;
+                padding: 28px 16px 32px;
+            }
+
+            header h1 {
+                  font-family: "Oswald", sans-serif;
+                font-size: clamp(2.8rem, 4vw, 4.4rem);
+                letter-spacing: 0.12em;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+            }
+
+            header p {
+                font-family: "Oswald", sans-serif;
+                color: #a8dfff;
+                font-size: 0.95rem;
+                letter-spacing: 0.12em;
+            }
+
+            .hero {
+                display: grid;
+                grid-template-columns: 1.2fr 0.8fr;
+                gap: 24px;
+                align-items: center;
+                margin: 0 auto 40px;
+                padding: 28px;
+                border: 1px solid var(--border);
+                border-radius: 24px;
+                background: var(--panel);
+                box-shadow: var(--shadow);
+            }
+
+            .hero-text h2 {
+                font-size: clamp(2rem, 3.5vw, 3rem);
+                margin-bottom: 16px;
+            }
+
+            .hero-text p {
+                font-family: "Poppins", sans-serif;
+                color: #c7dce8;
+                max-width: 680px;
+                font-size: 1.05rem;
+            }
+
+            .hero-badge {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 16px 20px;
+                background: aqua;
+                border-radius: 20px;
+                color: #082432;
+                font-weight: 700;
+                box-shadow: 0 12px 30px rgba(56, 189, 248, 0.22);
+            }
+
+
+            .card {
+                padding: 24px;
+                border-radius: 24px;
+                background: rgba(18, 33, 46, 0.96);
+                border: 1px solid rgba(255,255,255,0.06);
+                box-shadow: var(--shadow);
+                margin-bottom: 24px;
+            }
+
+            .card:hover {
+                transform: translateY(-4px);
+                transition: transform 0.3s ease;
+            }
+
+            .card h3 {
+                margin-bottom: 16px;
+                color: var(--accent);
+                font-size: 1.3rem;
+            }
+
+            .card ul,
+            .card p {
+                color: #d0e6f1;
+                font-size: 0.98rem;
+            }
+
+            .card ul {
+                list-style: none;
+                padding-left: 0;
+                margin-top: 12px;
+            }
+
+            .card li {
+                margin-bottom: 10px;
+                padding-left: 18px;
+                position: relative;
+            }
+
+            .card li::before {
+                content: '•';
+                position: absolute;
+                left: 0;
+                color: var(--accent2);
+                font-weight: 900;
+            }
+
+            .reviews {
+                margin-top: 36px;
+            }
+
+            .reviews h3 {
+                margin-bottom: 18px;
+                color: #9be7ff;
+            }
+
+            .review-list {
+                display: grid;
+                gap: 18px;
+            }
+
+            .review-item {
+                background: rgba(14, 27, 38, 0.95);
+                padding: 22px;
+                border-radius: 22px;
+                border: 1px solid rgba(56, 189, 248, 0.12);
+                color: #c9e7f5;
+            }
+
+            footer {
+                text-align: center;
+                margin-top: 48px;
+                color: #7aa7c1;
+                font-size: 0.95rem;
+                letter-spacing: 0.04em;
+            }
+
+            @media (max-width: 730px) {
+                .hero {
+                    grid-template-columns: 1fr;
+                    text-align: center;
+                }
+
+                .hero-badge {
+                    justify-content: center;
+                }
+            }
+        
+        </style>
+    </head>
+    <body>
+        <div class="page-wrap">
+            <header>
+                <h1>Kiran</h1>
+                <p>Home | Projects | Blog | Contact</p>
+            </header>
+
+            <section class="hero">
+                <div class="hero-text">
+                    <h2>Creative Web Developer & Digital Experience Designer</h2>
+                    <p>Building polished, responsive websites with clean code, intuitive interactions, and thoughtful visual design. My work blends modern user experience with practical front-end craftsmanship.</p>
+                </div>
+                <div class="hero-badge">5+ Years in Web Development</div>
+            </section>
+
+            <section class="grid">
+                <article class="card">
+                    <h3>Portfolio Highlights</h3>
+                    <ul>
+                        <li>Responsive HTML/CSS Layouts</li>
+                        <li>E-commerce storefront design</li>
+                        <li>Interactive form experiences</li>
+                        <li>Countdown and event widgets</li>
+                        <li>Landing pages with strong conversion focus</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Career Achievements</h3>
+                    <p>Front-end developer with a proven record of delivering polished websites and apps. Led a team of 5 developers and helped shape front-end strategy for multiple cross-functional projects.</p>
+                    <h3>Community Involvement</h3>
+                    <p>Active participant in local tech meetups and workshops. I enjoy mentoring junior developers and sharing best practices for accessible, maintainable code.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Academic Qualifications</h3>
+                    <p>Bachelor of Science in Computer Science<br>University of Technology<br>Expected Graduation: 2027</p>
+                    <ul>
+                        <li>Web development & UX design</li>
+                        <li>Systems analysis and architecture</li>
+                        <li>Accessibility standards</li>
+                        <li>Advanced JavaScript frameworks</li>
+                        <li>Responsive design principles</li>
+                        <li>Cloud computing fundamentals</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="reviews">
+                <h3>Peer Reviews</h3>
+                <div class="review-list">
+                    <div class="review-item">
+                        Kiran is a highly skilled and dedicated web developer. He consistently delivers high-quality work and demonstrates a strong understanding of modern web technologies. His ability to collaborate effectively with team members and his commitment to continuous learning make him a valuable asset to any project.
+                    </div>
+                    <div class="review-item">
+                        Kiran approaches web development with a keen eye for detail and a passion for creating user-friendly experiences. He is proactive in seeking feedback and implementing improvements, which has led to successful project outcomes.
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                © 2027 Kiran. All rights reserved.
+            </footer>
+        </div>
+    </body>
+</html>
